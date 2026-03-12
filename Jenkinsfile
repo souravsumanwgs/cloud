@@ -5,21 +5,21 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'echo "Building project..."'
+                echo "Building project..."
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo "Running tests..."'
+                echo "Running tests..."
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'mkdir -p deploy'
-                sh 'echo "Deployment successful" > deploy/result.txt'
+                echo "Deploying application..."
             }
         }
+
     }
 }
